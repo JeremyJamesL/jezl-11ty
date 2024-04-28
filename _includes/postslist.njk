@@ -1,0 +1,11 @@
+<ul class="">
+    {%- for post in collections.post -%}
+    <li class="mb-2">
+        <h3>
+            <a href="{{post.url}}" class="font-bold">
+                {{ post.data.title }}
+            </a>
+        </h3>
+    </li>
+    {%- endfor -%}
+</ul>
