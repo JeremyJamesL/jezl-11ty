@@ -5,6 +5,7 @@ module.exports = {
     fontFamily: {
       sans: ["Nunito", "sans-serif"],
       serif: ["Merriweather", "serif"],
+      mono: ["Inconsolata", "monospace"],
     },
     extend: {},
   },
