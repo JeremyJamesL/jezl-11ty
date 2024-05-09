@@ -1,7 +1,8 @@
 ---
 layout: layout.njk
 ---
-<h1 class="font-bold text-4xl italic mb-5">{{title}}</h1>
+<h1 class="font-bold text-4xl italic mb-2">{{title}}</h1>
+<time class="font-mono text-sm text-gray-600 mb-5 block">{{ date | postDate }}</time>
 
 <div class="post">
     {{content | safe}}

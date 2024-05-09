@@ -13,10 +13,22 @@ main a {
     margin-bottom: 1rem;
 }
 
-.post > h2 {
+.post > h2,.post > h3,.post >  h4, .post > h5, .post > h6 {
         font-style: italic;
         font-weight: 700;
         font-size: 1.875rem;
         line-height: 2.25rem;
         margin-bottom: 1.25rem;
+        margin-top: 2rem;
+}
+
+.post img {
+ margin: 0 auto;
+}
+
+code {
+    font-size: .875em;
+    color: #d63384;
+    word-wrap: break-word;
+    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
 }

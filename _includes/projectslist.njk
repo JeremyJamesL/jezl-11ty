@@ -1,6 +1,6 @@
-<ul class="grid grid-cols-2 max-[400px]:grid-cols-1 gap-10">
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-10">
     {%- for post in collections.project -%}
-    <li class="w-full mb-2 flex justify-between flex-col">
+    <li class="w-full mb-2 flex flex-col max-[450px]:text-center">
         <div style="background-image: url('/assets/images/{{post.data.thumb}}')" class="w-full h-48 bg-cover shadow-md shadow-black border-white border-4 mb-5"></div>
         <h3>
             <a href="{{post.data.link}}" class="font-bold">
