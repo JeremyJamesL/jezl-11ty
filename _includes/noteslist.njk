@@ -1,0 +1,11 @@
+<ul class="list-disc list-inside">
+    {%- for post in collections.note -%}
+    <li class="note-item w-full mb-4 flex">
+        <h3>
+            <a href="{{post.url}}" class="note-title font-bold text=md">
+                {{ post.data.title }}
+            </a>
+        </h3>
+    </li>
+    {%- endfor -%}
+</ul>

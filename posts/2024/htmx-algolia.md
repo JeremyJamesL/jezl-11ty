@@ -24,7 +24,7 @@ HTMX allows you to write minimal, html-only code to make these same AJAX request
 
 Til now there is no online tutorial for creating an Algolia search UI wih HTMX.
 
-For this tutorial, we will be using <a href="">Algolia</a>, <a href="">HTMX</a> (of course), <a href="">Node / Express</a> on the backend and <a href="">pug</a> for html templating.
+For this tutorial, we will be using <a href="">Algolia</a>, <a href="">HTMX</a> (of course), <a href="">Node / Express</a> on the backend and <a href="">pug</a> for html templating and <a href="tailwind.com">Tailwind</a> for CSS.
 
 If you want to reference any of the code in this tutorial, it's hosted on <a href="github.com">github.</a>
 
@@ -58,8 +58,54 @@ Next, create a new folder calls `/public`, this is where we will serve our stati
 
 To ensure that our express app can serve these files, we require a declaration:
 
-`app.use(express.static("public"));`
-
+```js
+app.use(express.static("public"));
 ```
 
+Add an `index.html` file into the public folder.
+
+Add in HTMX and tailwind scripts into the document `<head>`, (we're not going to go into NPM packages here as it's overkill, feel free to in order to utilise Tailwind's).
+
+```html
+<script
+  src="https://unpkg.com/htmx.org@1.9.12"
+  integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2"
+  crossorigin="anonymous"
+></script>
+<script src="https://cdn.tailwindcss.com"></script>
+```
+
+All we need to do now is write some HTMX in our `index.html` file and create an API route to handle incoming requests.
+
+First, let's create a text input that will serve as our search bar in `index.html` and ass some HTMX attributes:
+
+```html
+<header class="py-4 px-2 shadow-lg">
+  <div class="m-auto max-w-6xl flex gap-8">
+    <a class="btn btn-ghost text-xl lowercase">HTMX / Algolia</a>
+    <input
+      type="text"
+      placeholder="Type here"
+      class="input input-bordered w-full"
+      hx-get="/api/search"
+      hx-trigger="keyup changed"
+      hx-vals='js:{"q": event.target.value}'
+      hx-swap="innerHTML"
+      hx-target="#app"
+    />
+  </div>
+</header>
+<main class="py-4 px-2 max-w-6xl m-auto gap-8 flex" id="app"></main>
+```
+
+This is a simple text input that makes a get request to `/api/search`, is triggered on the keyup and changed events, and will swap out the `innerHTML` of the `<main>` element with an id of `app`.
+
+Importantly, it uses HTMX's `hx-vals` attribute, which allows you to write JSON to send with the get request, which in this case will be the query string typed by the user in the search bar.
+
+If we open up an API route in `index.js` to handle this incoming request and console log the result, we should see the query sring coming through:
+
+```js
+app.get("/api/search", async (req, res) => {
+  console.log(req.query.q); // "foo"
+});
 ```

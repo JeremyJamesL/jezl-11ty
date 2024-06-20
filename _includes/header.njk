@@ -1,11 +1,10 @@
 <header class="bg-cyan-900 text-white">
-    {# <div class="egg">{{page.url | safe}}</div> #}
     <div class="max-w-5xl m-auto py-4 px-2 flex justify-between items-center">    
         <div class="flex items-center justify-between border-r-100">
             <img src="https://avatars.githubusercontent.com/u/47485563?v=4" alt="" class="flex-auto rounded-full border-white border-2 h-auto max-w-20 mr-3">
             <div class="flex flex-col flex-1">
                 <a href="/" class="font-bold text-2xl sm:text-3xl"><span class="sm:hidden">Jeremy J</span><span class="hidden sm:block">Jeremy James</span></a>
-                {# <div class="text-sm sm:hidden">Web dev / sols engineer</div> #}
+
                 <div class="text-sm hidden sm:block">Web developer / solutions engineer</div>
             </div>
         </div>
@@ -16,6 +15,9 @@
                 </li>
                 <li class=""> 
                     <a href="/projects" class="font-semibold hover:border-b-2 hover:border-dotted {% if page.url === '/projects/' %} border-b-2 border-dotted {%endif%}">Projects</a>
+                </li>
+                <li class=""> 
+                    <a href="/notes" class="font-semibold hover:border-b-2 hover:border-dotted {% if page.url === '/notes/' %} border-b-2 border-dotted {%endif%}">Notes</a>
                 </li>
             </ul>
         </div>
