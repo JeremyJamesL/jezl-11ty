@@ -1,5 +1,5 @@
 <ul class="list-disc list-inside">
-    {%- for post in collections.post -%}
+    {%- for post in collections.post | reverse%}
     <li class="w-full mb-4 flex justify-between">
         <h3>
             <a href="{{post.url}}" class="font-bold text=md">

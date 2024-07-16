@@ -13,6 +13,12 @@ main a {
     margin-bottom: 1rem;
 }
 
+.post ul {
+    list-style: disc!important;
+    padding-left: 15px;
+    margin-bottom: 10px;
+}
+
 .post > h2,.post > h3,.post >  h4, .post > h5, .post > h6 {
         font-style: italic;
         font-weight: 700;
@@ -64,8 +70,11 @@ code {
     /* display: inline-block; */
     box-sizing: border-box;
     animation: rotation 1s linear infinite;
-    }
+}
 
+pre[class*="language-"] {
+    margin-bottom: 15px!important;
+}
 /* .bg-overlay {
     background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);;
 } */
