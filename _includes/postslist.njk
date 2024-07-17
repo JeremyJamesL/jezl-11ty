@@ -1,12 +1,12 @@
 <ul class="list-disc list-inside">
     {%- for post in collections.post | reverse%}
-    <li class="w-full mb-4 flex justify-between">
+    <li class="w-full mb-4 flex justify-between gap-10">
         <h3>
             <a href="{{post.url}}" class="font-bold text=md">
                 {{ post.data.title }}
             </a>
         </h3>
-        <time class="font-mono text-sm text-gray-600">{{ post.date | postDate }}</time>
+        <time class="font-mono text-sm text-gray-600 text-right">{{ post.date | postDate }}</time>
     </li>
     {%- endfor -%}
 </ul>

@@ -82,7 +82,7 @@ function handleEmailSend(e) {
   };
 
   emailjs
-    .send("service_mli8f1", "template_hsw3t2q", templateParams, options)
+    .send("service_mli8ef1", "template_hsw3t2q", templateParams, options)
     .then(
       (response) => {
         loader.classList.remove("inline-block");
