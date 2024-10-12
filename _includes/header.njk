@@ -1,24 +1,24 @@
-<header class="bg-cyan-900 text-white">
-    <div class="max-w-5xl m-auto py-4 px-2 flex justify-between items-center">    
-        <div class="flex items-center justify-between border-r-100">
-            <img src="https://media.licdn.com/dms/image/C5103AQE8aSfgMwS64w/profile-displayphoto-shrink_800_800/0/1517277267148?e=1727308800&v=beta&t=5CTXszgTtb6sNf4lKp-DNkY8PH_PwYsurEVmN-luXCQ" alt="" class="flex-auto rounded-full border-white border-2 h-auto max-w-20 mr-3">
-            <div class="flex flex-col flex-1">
-                <a href="/" class="font-bold text-2xl sm:text-3xl"><span class="sm:hidden">Jeremy J</span><span class="hidden sm:block">Jeremy James</span></a>
-
-                <div class="text-sm hidden sm:block">Web developer / solutions engineer</div>
-            </div>
+<header class="py-10">
+    <div class="container">
+        <div class="mb-2">
+            <span class="text-2xl font-heading text-teal-900">Jeremy Luscombe</span>
         </div>
         <nav>
-            <ul class="flex gap-5 text-md sm:text-lg">
+            <ul class="flex gap-2 font-body font-light text-lg">
                 <li class=""> 
-                    <a href="/notes" class="font-semibold hover:border-b-2 hover:border-dotted {% if page.url === '/notes/' %} border-b-2 border-dotted {%endif%}">Notes</a>
+                    <a href="/" class="border-b-[1px] border-black {% if page.url === '/' %} font-medium {%endif%}">Home</a>
                 </li>
                 <li class=""> 
-                    <a href="/posts" class="font-semibold hover:border-b-2 hover:border-dotted{% if page.url === '/posts/' %} border-b-2 border-dotted {%endif%}" >Posts</a>
+                    <a href="/posts" class="border-b-[1px] border-black {% if page.url === '/posts/' %} font-medium {%endif%}">Posts</a>
                 </li>
                 <li class=""> 
-                    <a href="/projects" class="font-semibold hover:border-b-2 hover:border-dotted {% if page.url === '/projects/' %} border-b-2 border-dotted {%endif%}">Projects</a>
+                    <a href="/notes" class="border-b-[1px] border-black {% if page.url === '/notes/'  %} font-medium {%endif%}" >Notes</a>
+                </li>
+                <li class=""> 
+                    <a href="/now" class="border-b-[1px] border-black {% if page.url === '/now/' %} font-medium {%endif%}">Now</a>
                 </li>
             </ul>
+            
         </div>
+    </div>
 </header>

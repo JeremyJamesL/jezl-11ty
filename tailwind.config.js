@@ -11,7 +11,8 @@ module.exports = {
   },
   theme: {
     fontFamily: {
-      sans: ["Nunito", "sans-serif"],
+      heading: ["Inria Serif", "sans-serif"],
+      body: ["Lato", "sans-serif"],
       serif: ["Merriweather", "serif"],
       mono: ["Inconsolata", "monospace"],
     },

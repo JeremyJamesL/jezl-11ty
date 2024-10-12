@@ -1,46 +1,40 @@
 ---
 layout: subs/layout-page.njk
-title: Hey, i'm Jeremy👋
 ---
-<section class="mb-8">
-    <p class="mb-2">
-        I am a web developer and solutions engineer, currently working at <a href="https://algolia.com">Algolia</a>. 
-    </p>
-    
-    <p class="mb-2">
-        Here you will find <a href="/posts">blog posts</a> about web development, linux and digital autonomy. I also have an area dedicated to the <a href="/projects/">projects</a> I am working on. 
-    </p>
-    
-    <p class="mb-2">    
-        If you would like help with a project, then contact me <a href="mailto:hello@jezl.xyz">here</a>.
+
+<section class="font-body font-light text-lg py-11 bg-cyan-900 text-white">
+  <div class="container">
+    <h2 class="font-heading font-medium text-2xl mb-5">👋 Hi, i'm Jeremy</h2>
+
+    <p class="mb-5">
+      I am a web developer and solutions engineer, currently working at
+      <a href="https://algolia.com">Algolia</a>.
     </p>
 
-    <p class="mb-2">    
-        This site is built with <a href="https://11ty.com">11ty</a> and <a href="https://tailwind.com">tailwind.</a>. Posts are written in markdown and hosted on a VPS.
+    <p class="mb-5">
+      Here you will find <a href="/posts">blog posts</a> about web development,
+      linux and digital autonomy.
     </p>
+
+    <p class="mb-5">
+      If you would like help with a project, then contact me
+      <a href="mailto:jeremyluscombe@gmail.com">here</a>.
+    </p>
+
+    <p class="mb-5">
+      This site is built with <a href="https://11ty.com">11ty</a> and
+      <a href="https://tailwind.com">tailwind.</a> Posts are written in markdown
+      and hosted on a VPS.
+    </p>
+  </div>
 </section>
 
-<section class="mb-8">
-    <h2 class="font-bold text-3xl italic mb-5"> 
-        Latest posts
+<section class="py-11">
+  <div class="container">
+    <h2 class="font-heading font-medium text-2xl mb-5 text-teal-900">
+      Latest posts
     </h2>
 
-   {%include 'postslist.njk'%}
-   <div class="text-center mt-10">
-    <a href="/posts" class="font-bold inline-block text-xl">View all posts 📝</a>
-   </div>
-</section>
-
-
-<section class="mb-8">
-    <h2 class="font-bold text-3xl italic mb-5"> 
-        Latest projects
-    </h2>
-
-   {%include 'projectslist.njk'%}
-
-   <div class="text-center mt-10">
-    <a href="/projects" class="font-bold inline-block text-xl">View all projects 🧰</a>
-   </div>
-
+    {%include 'postslist.njk'%}
+  </div>
 </section>

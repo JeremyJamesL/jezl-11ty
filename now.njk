@@ -1,0 +1,76 @@
+---
+layout: /layouts/layout.njk
+title: Now
+date: Last Modified
+---
+
+<div class="container">
+  <header class="text-left mb-8">
+    <div class="border-b-2 mb-5">
+      <h1 class="font-heading text-3xl text-teal-900 mb-2">{{ title }}</h1>
+    </div>
+  </header>
+  <div class="post font-light">
+    <section class="text-left mb-8">
+      <p>
+        (This is a <a href="https://nownownow.com/about">now</a> page, which I
+        prefer to about and was last updated on: {{ page.date | postDate }} )
+      </p>
+      <h2 class="">Work 💼</h2>
+      <p>
+        I'm currently working at <a href="https://algolia.com">Algolia</a> as a
+        Solutions Engineer.
+      </p>
+    </section>
+    <section class="">
+      <h2 class="">Reading 📖</h2>
+      <div class="hidden sm:grid sm:grid-cols-2 sm:gap-5 mb-2">
+        <h2>Currently reading...</h2>
+        <h2>Just finished</h2>
+      </div>
+      <div
+        class="grid grid-cols-4 grid-rows-none sm:grid-rows-auto sm:gap-5 align-top"
+      >
+        <div class="col-span-4 row-span-1 sm:col-span-2 sm:row-span-2 mb-2">
+          <img class="w-full h-auto" src="/assets/images/daa.jpg" />
+        </div>
+        <img
+          class="hidden sm:block w-full h-auto col-span-2 row-span-1 sm:col-span-1 sm:row-span-1"
+          src="/assets/images/siddharta.jpg"
+          alt=""
+        />
+        <img
+          class="hidden sm:block w-full h-auto col-span-2 row-span-1 sm:col-span-1 sm:row-span-1"
+          src="/assets/images/js.jpg"
+          alt=""
+        />
+        <img
+          class="hidden sm:block w-full h-auto col-span-2 row-span-1 sm:col-span-1 sm:row-span-1"
+          src="/assets/images/low-life.jpg"
+          alt=""
+        />
+      </div>
+    </section>
+    <section class="mb-8">
+      <h2>Software 💻</h2>
+      <p>
+        I've got a partcular interest in the concept of self-hosted software at
+        the moment. Moving towards a decentralised internet. Creating sites on a
+        VPS and hosting my own
+        <a href="mailto:jeremyluscombe@gmail.com">email server</a>
+        are small steps i've already taken in this area.
+      </p>
+      <p>I plan to do more, however. Including:</p>
+      <ul class="">
+        <li class="">
+          Host my own Photos application, moving off Google Photos.
+        </li>
+        <li class="">Host my own Calibre instance on my VPS</li>
+        <li class="">
+          Create my own cloud storage system with
+          <a href="https://nextcloud.com/">NextCloud</a>
+        </li>
+      </ul>
+    </section>
+  </div>
+</div>

@@ -1,12 +1,12 @@
-<ul class="list-disc list-inside">
-    {%- for post in collections.post | reverse%}
-    <li class="w-full mb-4 flex justify-between gap-10">
-        <h3>
-            <a href="{{post.url}}" class="font-bold text=md">
-                {{ post.data.title }}
-            </a>
-        </h3>
-        <time class="font-mono text-sm text-gray-600 text-right">{{ post.date | postDate }}</time>
-    </li>
-    {%- endfor -%}
+<ul class="list-disc pl-8 font-body font-light">
+  {%- for post in collections.post | reverse%}
+  <li class="mb-3">
+    <h3>
+      <a href="{{ post.url }}" class="mr-2 visited:text-red-600">
+        {{ post.data.title }}
+      </a>
+      <time class="">{{ post.date | postDate }}</time>
+    </h3>
+  </li>
+  {%- endfor -%}
 </ul>

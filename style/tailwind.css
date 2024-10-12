@@ -3,10 +3,19 @@
 @tailwind utilities;
 
 
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
 main a {
-    color: #3761ad;
-    border-bottom: 1px solid #3761ad;
-    border-style: dashed;
+    text-decoration: underline;
+}
+
+body a:hover {
+    background-color: rgba(22, 78, 99, 0.2);
 }
 
 .post p {
@@ -19,17 +28,16 @@ main a {
     margin-bottom: 10px;
 }
 
-.post > h2,.post > h3,.post >  h4, .post > h5, .post > h6 {
-        font-style: italic;
-        font-weight: 700;
-        font-size: 1.875rem;
-        line-height: 2.25rem;
-        margin-bottom: 1.25rem;
+.post h2,.post h3,.post  h4, .post h5, .post  h6 {
+        color: rgb(19, 78, 74);
+        font-family: "Inria Serif", "sans-serif";
+        font-size: 1.5rem;
         margin-top: 2rem;
+        margin-bottom: 15px;
 }
 
 .post img {
- margin: 0 auto;
+    margin: 0 auto;
 }
 
 code {

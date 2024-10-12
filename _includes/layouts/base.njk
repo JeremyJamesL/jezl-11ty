@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{title}}</title>
-    <meta name="description" content="{{description}}">
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/images/apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title }}</title>
+    <meta name="description" content="{{ description }}" />
     <link
-			href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
-			rel="stylesheet"
-		/>
-    <link rel="stylesheet" href="/output.css"/>
-</head>
-<body class="relative min-h-screen">
-    {{content | safe}}
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/images/favicon-16x16.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://unpkg.com/prismjs@1.20.0/themes/prism-okaidia.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/output.css" />
+  </head>
+  <body class="relative min-h-screen bg-zinc-100 font-body text-lg md:text-xl">
+    {{ content | safe }}
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
     <script src="/scripts/index.js"></script>
     <script type="text/javascript">
-    // Email.js initialize on load
-        (function () {
+      // Email.js initialize on load
+      (function () {
         emailjs.init({
-            publicKey: "Mt5AFtPFH-P2XS_cP",
-            limitRate: {
+          publicKey: "Mt5AFtPFH-P2XS_cP",
+          limitRate: {
             // Set the limit rate for the application
             id: "app",
             // Allow 1 request per 10s
             throttle: 10000,
-            },
+          },
         });
-        })();
-  </script>
-</body>
+      })();
+    </script>
+  </body>
 </html>
-
