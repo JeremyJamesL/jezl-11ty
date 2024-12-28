@@ -1,0 +1,11 @@
+<ul class="list-disc pl-3 font-body font-light">
+  {%- for post in collections.snippet | reverse%}
+  <li class="mb-3">
+    <h3>
+      <a href="{{ post.url }}" class="mr-2 visited:text-red-600">
+        {{ post.data.title }}
+      </a>
+    </h3>
+  </li>
+  {%- endfor -%}
+</ul>

@@ -1,12 +1,8 @@
-<ul class="">
-  {%- for post in collections.project -%}
-  <li class="">
-    <div
-      style="background-image: url('/assets/images/{{ post.data.thumb }}')"
-      class=""
-    ></div>
+<ul class="list-disc pl-3 font-body font-light">
+  {%- for post in collections.project | reverse%}
+  <li class="mb-3">
     <h3>
-      <a href="{{ post.data.link }}" class="">
+      <a href="{{ post.data.url }}" class="mr-2 visited:text-red-600">
         {{ post.data.title }}
       </a>
     </h3>

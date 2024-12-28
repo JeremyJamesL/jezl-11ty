@@ -1,21 +1,25 @@
 <header class="py-10">
     <div class="container">
         <div class="mb-2">
-            <span class="text-2xl font-heading text-teal-900">Jeremy Luscombe</span>
+            <span class="text-2xl font-heading text-teal-900"><a href="/">Jeremy Luscombe</a></span>
         </div>
         <nav>
             <ul class="flex gap-2 font-body font-light text-lg">
+ 
                 <li class=""> 
-                    <a href="/" class="border-b-[1px] border-black {% if page.url === '/' %} font-medium {%endif%}">Home</a>
+                    <a href="/posts/" class="border-b-[1px] border-black {% if page.url === '/posts/' %} font-medium {%endif%}">Posts</a>
                 </li>
                 <li class=""> 
-                    <a href="/posts" class="border-b-[1px] border-black {% if page.url === '/posts/' %} font-medium {%endif%}">Posts</a>
+                    <a href="/snippets/" class="border-b-[1px] border-black {% if page.url === '/snippets/'  %} font-medium {%endif%}" >Snippets</a>
                 </li>
                 <li class=""> 
-                    <a href="/notes" class="border-b-[1px] border-black {% if page.url === '/notes/'  %} font-medium {%endif%}" >Notes</a>
+                    <a href="/notes/" class="border-b-[1px] border-black {% if page.url === '/notes/'  %} font-medium {%endif%}" >Notes</a>
                 </li>
                 <li class=""> 
-                    <a href="/now" class="border-b-[1px] border-black {% if page.url === '/now/' %} font-medium {%endif%}">Now</a>
+                    <a href="/projects/" class="border-b-[1px] border-black {% if page.url === '/projects/'  %} font-medium {%endif%}" >Projects</a>
+                </li>
+                <li class=""> 
+                    <a href="/now/" class="border-b-[1px] border-black {% if page.url === '/now/' %} font-medium {%endif%}">Now</a>
                 </li>
             </ul>
             
