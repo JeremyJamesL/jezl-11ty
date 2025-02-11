@@ -1,7 +1,7 @@
 ---
 title: Bash function to npm build and deploy to server
 tags: snippet
-layout: subs/layout-note.njk
+layout: subs/layout-snippet.njk
 ---
 
 Here is the single command I use to deploy this site to my Vultr VPS:

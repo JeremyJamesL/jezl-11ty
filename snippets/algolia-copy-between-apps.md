@@ -1,7 +1,7 @@
 ---
 title: Copy indices between Algolia apps w/ CLI
 tags: snippet
-layout: subs/layout-note.njk
+layout: subs/layout-snippet.njk
 ---
 
 Ensure the [Algolia CLI](https://www.algolia.com/doc/tools/cli/get-started/overview/#install-the-algolia-cli) is installed

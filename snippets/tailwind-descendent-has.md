@@ -1,7 +1,7 @@
 ---
 title: Apply a tailwind class based on descendent state
 tags: snippet
-layout: subs/layout-note.njk
+layout: subs/layout-snippet.njk
 ---
 
 You can apply css classes to parent elements if any of the parent's descendents meet a certain condition using the `has()` selector.

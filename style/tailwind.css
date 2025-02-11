@@ -2,87 +2,100 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .container {
-    max-width: 900px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 main a {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 body a:hover {
-    background-color: rgba(22, 78, 99, 0.2);
+  background-color: rgba(22, 78, 99, 0.2);
 }
 
 .post p {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .post ul {
-    list-style: disc!important;
-    padding-left: 15px;
-    margin-bottom: 10px;
+  list-style: disc !important;
+  padding-left: 15px;
+  margin-bottom: 10px;
 }
 
-.post h2,.post h3,.post  h4, .post h5, .post  h6 {
-        color: rgb(19, 78, 74);
-        font-family: "Inria Serif", "sans-serif";
-        font-size: 1.5rem;
-        margin-top: 2rem;
-        margin-bottom: 15px;
+.post h2,
+.post h3,
+.post h4,
+.post h5,
+.post h6 {
+  color: rgb(19, 78, 74);
+  font-family: "Inria Serif", "sans-serif";
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 15px;
+}
+
+.post blockquote {
+  font-style: italic;
+  border-left: 4px solid #ccc;
+  padding: 10px 20px;
+  margin: 20px 0;
+  color: #555;
+  background: #f9f9f9;
+}
+
+.post blockquote p {
+  margin-bottom: 0px;
 }
 
 .post img {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 code {
-    font-size: .875em;
-    color: #d63384;
-    word-wrap: break-word;
-    font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  font-size: 0.875em;
+  color: #d63384;
+  word-wrap: break-word;
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono,
+    Courier New, monospace;
 }
 
 .headshot {
-    shape-outside: circle(50%);
-    float: left;
+  shape-outside: circle(50%);
+  float: left;
 }
 
-
 .curved {
-    border-bottom-right-radius: 50% 10%;
+  border-bottom-right-radius: 50% 10%;
 }
 
 .curved-top {
-    border-top-left-radius: 50% 10%;
+  border-top-left-radius: 50% 10%;
 }
 @keyframes rotation {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-    } 
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 .loader {
-    width: 48px;
-    height: 48px;
-    border: 5px solid #FFF;
-    border-bottom-color: transparent;
-    border-radius: 50%;
-    /* display: inline-block; */
-    box-sizing: border-box;
-    animation: rotation 1s linear infinite;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  /* display: inline-block; */
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
 
 pre[class*="language-"] {
-    margin-bottom: 15px!important;
+  margin-bottom: 15px !important;
 }
-/* .bg-overlay {
-    background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg);;
-} */

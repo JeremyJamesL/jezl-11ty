@@ -1,7 +1,7 @@
 ---
 title: Browse Algolia index and update objects (JS)
 tags: snippet
-layout: subs/layout-note.njk
+layout: subs/layout-snippet.njk
 ---
 
 ```js

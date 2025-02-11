@@ -1,7 +1,7 @@
 ---
 title: Count items in JSON file using jq
 tags: snippet
-layout: subs/layout-note.njk
+layout: subs/layout-snippet.njk
 ---
 
 ```console

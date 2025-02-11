@@ -3,5 +3,32 @@ layout: /layouts/layout.njk
 title: All notes
 description: A list of all notes
 ---
+{% set coursesArr = [] %}
 
-<div class="container">{%include 'noteslist.njk'%}</div>
+{% for item in collections.coursesList %}
+	{% if coursesArr.indexOf(item.data.course) == -1 %}
+		{% set coursesArr = (coursesArr.push( item.data.course ), coursesArr) %}
+	{% endif %}
+{% endfor %}
+
+<div class="container">
+
+<ul class="list-disc pl-3 font-body font-light">
+{% for theCourse in coursesArr %}
+	<li class="mb-3">
+		<h2 class="mb-2">{{ theCourse }}</h2>
+
+		{% for item in collections.coursesList %}
+			{% if item.data.course == theCourse %}
+			<h3>
+				<a href="{{ item.url }}" class="text-[18px] mr-2 visited:text-red-600 no-underline">
+					{{ item.data.title }}
+				</a>
+			</h3>  
+			{% endif %}
+		{% endfor %}
+	</li>
+{% endfor %}
+</ul>
+
+</div> 

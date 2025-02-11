@@ -6,7 +6,15 @@ module.exports = function (eleventyConfig) {
     return DateTime.fromJSDate(dateObj).toLocaleString(DateTime.DATE_MED);
   });
 
-  eleventyConfig.addPassthroughCopy("assets/images");
+  eleventyConfig.addCollection("coursesList", function (collectionApi) {
+    const courseColl = collectionApi
+      .getAll()
+      .filter((item) => item.data.course);
+    console.log(courseColl);
+    return courseColl;
+  });
+
+  eleventyConfig.addPassthroughCopy("assets/");
   eleventyConfig.addPassthroughCopy("scripts");
   eleventyConfig.addPlugin(syntaxHighlight);
 };
