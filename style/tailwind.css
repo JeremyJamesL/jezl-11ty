@@ -98,4 +98,5 @@ code {
 
 pre[class*="language-"] {
   margin-bottom: 15px !important;
+  font-size: 15px;
 }
