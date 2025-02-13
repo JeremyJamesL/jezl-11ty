@@ -13,18 +13,24 @@ description: A list of all notes
 
 <div class="container">
 
-<ul class="list-disc pl-3 font-body font-light">
+<ul class="list-disc pl-3">
 {% for theCourse in coursesArr %}
 	<li class="mb-3">
-		<h2 class="mb-2">{{ theCourse }}</h2>
-
+  <input type="checkbox" class="hidden peer" id="checkbox-{{ loop.index }}">
+  <label for="checkbox-{{ loop.index }}">
+		<h2 class="mb-2 cursor-pointer font-heading text-xl text-teal-900 mb-2 capitalize">{{ theCourse }} <span>⏵</span></h2>
+  </label>
 		{% for item in collections.coursesList %}
 			{% if item.data.course == theCourse %}
-			<h3>
+      <ul class="hidden peer-checked:block">
+      <li>
+			<h3 class="font-body font-light">
 				<a href="{{ item.url }}" class="text-[18px] mr-2 visited:text-red-600 no-underline">
 					{{ item.data.title }}
 				</a>
 			</h3>  
+      </li>
+      </ul>
 			{% endif %}
 		{% endfor %}
 	</li>
