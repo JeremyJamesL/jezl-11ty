@@ -16,5 +16,6 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("assets/");
   eleventyConfig.addPassthroughCopy("scripts");
+  eleventyConfig.addPassthroughCopy("notes/assets");
   eleventyConfig.addPlugin(syntaxHighlight);
 };

@@ -1,5 +1,3 @@
-
-
 const fs = require("fs");
 const path = require("path");
 const folderName = "/Users/jeremy.luscombe/learning/master-notes/";
@@ -55,11 +53,12 @@ fs.rm(outputFolderName, { recursive: true, force: true }, (err) => {
             const niceFileName = fileData.name.replace("-", " ");
             const frontMatter = `---\ntitle: ${niceFileName}\ntags: note\ncourse: ${niceDirectoryName}\nlayout: subs/layout-note.njk\n---`;
             const outputFileName = outputFolderName + dir + "/" + file;
-            const newFileData = fs.readFileSync(totalPath);
-
+            const newFileData = fs.readFileSync(totalPath, "utf-8");
+            const betterFileString = newFileData.replaceAll("assets/", "/assets/" );
+            
             fs.writeFile(
               outputFileName,
-              frontMatter + "\n" + newFileData,
+              frontMatter + "\n" + betterFileString,
               "utf-8",
               (err) => {
                 if (err) {
